@@ -21,6 +21,20 @@
 - 표준안이 없다.
 - REST API or RESTful API
 
+---
+#### MyBatis 세팅
+1. pom.xml
+   1. log4j -> 1.2.17
+   2. Servlet -> 3.1.0
+   3. JSP 2.3.3
+   4. Lombok
+   5. JDBC
+   6. MyBatis
+   7. HikariCP
+2. root-context.xml
+3. 기타 등등...
+4. 설정이 끝나고 나면 단위테스트 필수
+
 <!-- ---
 
 #### 파일, 패키지
