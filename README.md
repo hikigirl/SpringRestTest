@@ -1,4 +1,4 @@
-# AOPTest
+# RestTest
 
 - new - spring legacy project - spring mvc project
 - project name: `RestTest`
@@ -15,9 +15,13 @@
   - configuration 태그 내부 source, target 내부 11로 변경
 
 ---
+### Rest, Representational State Transfer
+- 웹 상의 자원(문서, 이미지, 동영상, 데이터 등)의 위치를 자원명으로 표시해서 자원의 상태를 주고 받기 위한 행동 + 표현법
+- __웹 상의 자원을 URI 자체로도 식별 가능하게 URI을 만들자(***)__
+- 표준안이 없다.
+- REST API or RESTful API
 
-
----
+<!-- ---
 
 #### 파일, 패키지
 
@@ -33,4 +37,4 @@
 - WEB-INF/views
   - `list.jsp`
   - `add.jsp`
-  - `view.jsp`
+  - `view.jsp` -->
