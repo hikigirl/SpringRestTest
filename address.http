@@ -1,0 +1,31 @@
+# RestAPI 테스트용 파일
+
+POST http://localhost:8080/rest/address
+Content-Type: application/json
+
+{
+    "name" : "불켜미",
+    "age" : "6",
+    "gender" : "m",
+    "address": "서울시 강남구 역삼동"
+}
+
+### 
+# 목록보기
+GET http://localhost:8080/rest/address
+
+###
+# 수정하기
+PUT http://localhost:8080/rest/address/101
+Content-Type: application/json
+
+{
+    "name" : "개구마르",
+    "age" : 15,
+    "gender" : "f",
+    "address": "미르시티"
+}
+
+###
+#삭제하기
+DELETE http://localhost:8080/rest/address/101

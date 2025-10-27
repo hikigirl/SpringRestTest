@@ -15,6 +15,7 @@
   - configuration 태그 내부 source, target 내부 11로 변경
 
 ---
+
 ### Rest, Representational State Transfer
 - 웹 상의 자원(문서, 이미지, 동영상, 데이터 등)의 위치를 자원명으로 표시해서 자원의 상태를 주고 받기 위한 행동 + 표현법
 - __웹 상의 자원을 URI 자체로도 식별 가능하게 URI을 만들자(***)__
@@ -22,6 +23,7 @@
 - REST API or RESTful API
 
 ---
+
 #### MyBatis 세팅
 1. pom.xml
    1. log4j -> 1.2.17
@@ -35,20 +37,32 @@
 3. 기타 등등...
 4. 설정이 끝나고 나면 단위테스트 필수
 
-<!-- ---
+---
+#### REST API 서버 구축
+- 클라이언트: 브라우저(Ajax), 모바일 앱, JavaScript Framework 등
+- 요청 URI -> Restful 설계
+- 요청/응답 데이터: JSON 기반
+- 주 업무: tblAddress에 대한 CRUD
+
+#### REST API 개발 -> 테스트용 클라이언트 도구 필요함
+- 브라우저: 테스트 용도로 부적합
+  - GET메서드 테스트는 쉽지만 POST는 jsp가 반드시 있어야 해서 불편
+  - PUT, PATCH, DELETE 메서드: 테스트 불가(폼태그에는 GET, POST만 작성 가능)
+- cmd창: curl 명령어(프로그램) -> 임시 테스트용
+- 전문적인 REST Client Tool => Best
+  - __Postman__, Insomnia, __VS Code__, __Swagger__ 등...
+  - VS Code는 Rest Client라는 확장 프로그램 설치하였음.
+
+---
 
 #### 파일, 패키지
 
 ##### src/main/java - Controller
-- com.test.aop.controller
-  - `MemoController.java`
-- com.test.aop.service
-  - `MemoService.java`
-- com.test.aop.aspect
-  - `Logger.java`
+- com.test.rest.controller
+  - `AddressController.java`
+- com.test.rest.model
+  - `AddressDAO.java`
+  - `AddressDTO.java`
 
 ##### src/main/webapp - View
-- WEB-INF/views
-  - `list.jsp`
-  - `add.jsp`
-  - `view.jsp` -->
+- WEB-INF/views: 만들지 않는다.(REST 환경은 Json을 반환하므로)
