@@ -38,6 +38,12 @@
 4. 설정이 끝나고 나면 단위테스트 필수
 
 ---
+
+##### Swagger 세팅하기
+- API 문서 자동화 + 테스트하기
+  - 도움말 만들기 + Postman처럼 테스트 환경 만들기
+
+---
 #### REST API 서버 구축
 - 클라이언트: 브라우저(Ajax), 모바일 앱, JavaScript Framework 등
 - 요청 URI -> Restful 설계

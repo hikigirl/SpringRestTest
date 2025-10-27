@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.test.rest.model.AddressDAO;
 import com.test.rest.model.AddressDTO;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import lombok.RequiredArgsConstructor;
 
 //@Controller
@@ -22,11 +25,12 @@ import lombok.RequiredArgsConstructor;
 
 //REST API 전용 컨트롤러
 @RestController @RequiredArgsConstructor
+@Api(value="주소록 컨트롤러", description = "주소록 데이터에 대한 REST API 컨트롤러입니다.")
 public class AddressController {
 	private final AddressDAO dao;
 	
 	//기존 방식
-	@GetMapping("/m1.do") 
+	@GetMapping("/m1.do")
 	public AddressDTO m1() {
 		//AddressDTO - 변환 - JSON
 		//1. 직접 문자열로
@@ -43,8 +47,9 @@ public class AddressController {
 	//1. URL을 어떻게 만들 것인가: http://localhost:8080/rest/address
 	//2. 메서드? : POST
 	//3. 반환값? : Integer
-	@PostMapping("/address")
-	public int add(@RequestBody AddressDTO dto) {
+	@PostMapping("/address") 
+	@ApiOperation(value = "주소록 추가하기", notes = "주소록 데이터를 추가합니다.")
+	public int add(@RequestBody @ApiParam(value="주소록 데이터", required = true) AddressDTO dto) {
 		System.out.println("dto: " + dto);
 		//x-www-form-urlencoded -> @RequestParam AddressDTO dto
 		//JSON raw -> @RequestBody AddressDTO dto
